@@ -1,9 +1,9 @@
-class ProgrammingLanguageBuilder() {
-    ProgrammingLanguage setName(String name);
-    ProgrammingLanguage setVersion(int version);
-    ProgrammingLanguage setPopularity(int popularity);
-    ProgrammingLanguage setStaticallyTyped(boolean staticallyTyped);
-    ProgrammingLanguage setJobDemand(int jobDemand);
+public interface ProgrammingLanguageBuilder  {
+    ProgrammingLanguageBuilder setName(String name);
+    ProgrammingLanguageBuilder setVersion(float version);
+    ProgrammingLanguageBuilder setPopularity(int popularity);
+    ProgrammingLanguageBuilder setStaticallyTyped(Boolean staticallyTyped);
+    ProgrammingLanguageBuilder setJobDemand(int jobDemand);
 
-    public ProgrammingLanguage build();
+    ProgrammingLanguage build();
 }

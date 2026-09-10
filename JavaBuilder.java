@@ -1,27 +1,32 @@
 public class JavaBuilder implements ProgrammingLanguageBuilder {
     ProgrammingLanguage progLang = new ProgrammingLanguage();
 
-    ProgrammingLanguage setName(String name) {
-        progLang.setName("Java");
+    public ProgrammingLanguageBuilder setName(String name) {
+        progLang.setName(name);
+        return this;
     }
-    ProgrammingLanguage setVersion(int version){
-        progLang.setVersion(23)
+    public ProgrammingLanguageBuilder setVersion(float version){
+        progLang.setVersion(version);
+        return this;
     }
-    ProgrammingLanguage setPopularity(int popularity) {
-        progLang.setPopularity(4)
+    public ProgrammingLanguageBuilder setPopularity(int popularity) {
+        progLang.setPopularity(popularity);
+        return this;
     }
-    ProgrammingLanguage setStaticallyTyped(boolean staticallyTyped) {
-        progLang.setStaticallyTyped(true)
+    public ProgrammingLanguageBuilder setStaticallyTyped(Boolean staticallyTyped) {
+        progLang.setStaticallyTyped(staticallyTyped);
+        return this;
     }
-    ProgrammingLanguage setJobDemand(int jobDemand) {
-        progLang.setJobDemand(3)
+    public ProgrammingLanguageBuilder setJobDemand(int jobDemand) {
+        progLang.setJobDemand(jobDemand);
+        return this;
     }
 
     public ProgrammingLanguage build(){
         if (progLang.getName() == null 
-            || progLang.setVersion() == null 
-            || progLang.getPopularity() == null 
-            || progLang.getJobDemand() == null
+            || progLang.getVersion() == 0
+            || progLang.getPopularity() == 0 
+            || progLang.getJobDemand() == 0
             || progLang.getStaticallyTyped() == null)
         {
             throw new IllegalStateException("Invalid state");
