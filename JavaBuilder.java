@@ -29,7 +29,7 @@ public class JavaBuilder implements ProgrammingLanguageBuilder {
             || progLang.getJobDemand() == 0
             || progLang.getStaticallyTyped() == null)
         {
-            throw new IllegalStateException("Invalid state");
+            throw new IllegalStateException("Programming language is missing required properties");
         }
         return progLang;
     }
