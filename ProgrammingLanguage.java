@@ -7,9 +7,9 @@ public class ProgrammingLanguage {
 
     public String getName() {return name;}
     public int getVersion() {return version;}
-    public int popularity() {return popularity;}
-    public boolean staticallyTyped() {return staticallyTyped;}
-    private int jobDemand() {return jobDemand;}
+    public int getPopularity() {return popularity;}
+    public boolean getStaticallyTyped() {return staticallyTyped;}
+    private int getJobDemand() {return jobDemand;}
 
     public void setName(String name) {this.name = name;}
     public void setVersion(int version) {this.version = version}
